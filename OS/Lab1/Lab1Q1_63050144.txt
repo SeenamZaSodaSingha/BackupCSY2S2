@@ -1,0 +1,15 @@
+1.11) copy ".\sub\test1.txt"
+
+1.12) copy c:\oslab1\sub\test1.txt .\test2.txt
+
+1.13) md c:\oslab1\abc
+
+1.16) del test2.txt
+
+1.19) rd /q c:\oslab1\sub
+
+1.20)
+c:\Windows\System32
+c:\Windows\SysWOW64
+c:\Windows\WinSxS\amd64_microsoft-windows-format_31bf3856ad364e35_10.0.19041.1_none_dc79f03629571954
+c:\Windows\WinSxS\wow64_microsoft-windows-format_31bf3856ad364e35_10.0.19041.1_none_e6ce9a885db7db4f

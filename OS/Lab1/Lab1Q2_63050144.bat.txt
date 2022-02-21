@@ -1,0 +1,24 @@
+cd .\q2
+mkdir sub2
+copy sub1\F11.txt sub2\F21.txt
+copy sub1\F12.txt sub2\F22.txt
+copy sub1\sub3\F13.txt sub2\F23.txt
+cd sub2
+ren F22.txt F22.doc
+del *.txt
+
+REM Line 1: ABSOLUTE
+REM Line 1: RELATIVE
+REM Line 1: RELATIVE
+REM Line 1: RELATIVE
+REM Line 1: RELATIVE
+REM Line 1: RELATIVE
+REM Line 1:-
+REM Line 1:RELATIVE - RELATIVE
+REM Line 1:ABSOLUTE
+REM Line 1:RELATIVE - RELATIVE
+REM Line 1:RELATIVE - ABSOLUTE
+
+REM rmdir /s /q c:\q2\sub1
+REM move .\sub2\F22.doc .
+REM rmdir /s /q c:\q2\sub2
