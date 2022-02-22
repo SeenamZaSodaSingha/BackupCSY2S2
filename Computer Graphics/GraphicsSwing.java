@@ -4,6 +4,7 @@ import java.util.*;
 import javax.swing.*;
 import java.util.LinkedList;
 import java.util.Random;
+import java.awt.geom.*;
 
 class GraphicsSwing extends JPanel implements Runnable {
     static Random rd = new Random(69420);
@@ -52,7 +53,7 @@ class GraphicsSwing extends JPanel implements Runnable {
 
             //square move
             if((currentTime - squareStartTime)/1000 >= 3.0){
-                System.out.println((currentTime - squareStartTime)/1000);
+                // System.out.println((currentTime - squareStartTime)/1000);
                 squareMove = true;
             }
             if(squareMove){
@@ -83,16 +84,20 @@ class GraphicsSwing extends JPanel implements Runnable {
     public void paintComponent(Graphics g) { // always call when create frame
 
         Graphics2D g2 = (Graphics2D)g;
-        g2.setColor(Color.white);
-        g2.fillRect(0, 0, 600, 600);
-        g2.setColor(Color.black);
+        // g2.setColor(Color.white);
+        // g2.fillRect(0, 0, 600, 600);
+        // g2.setColor(Color.black);
         // midpointCircle(g, (int)circleMove, 200, 100, 3);
         // g2.drawOval((int)circleMove, 0, 100, 100);
+        
+        g2.setTransform(new AffineTransform(1, 0, 0, 1, -200, -200));
+        g2.setTransform(new AffineTransform(1, 0, 0, 1, 100, 100));
+        g2.drawRect(200, 200, 200, 200);
 
 
-        g2.drawOval((int)x, (int)y, r, r);
-        g2.setColor(Color.GREEN);
-        g2.fillRect((int)sqx, (int)sqy, 100, 100);
+        // g2.drawOval((int)x, (int)y, r, r);
+        // g2.setColor(Color.GREEN);
+        // g2.fillRect((int)sqx, (int)sqy, 100, 100);
         //change anchor point
         // g2.rotate(squareRotate, 300, 300);
         // x + width/2, y + height/2
