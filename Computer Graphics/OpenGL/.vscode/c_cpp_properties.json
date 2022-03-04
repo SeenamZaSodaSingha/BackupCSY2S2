@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x86",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "D:\\Code\\Y2S2\\Computer Graphics\\External Libs\\External Libs\\**",
+        "D:\\Code\\Y2S2\\Computer Graphics\\External Libs\\External Libs\\GLM\\**",
+        "D:\\Code\\Y2S2\\Computer Graphics\\External Libs\\External Libs\\GLEW\\include\\**",
+        "D:\\Code\\Y2S2\\Computer Graphics\\External Libs\\External Libs\\GLFW\\include\\**"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "C:/MinGW/bin/gcc.exe",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++14",
+      "intelliSenseMode": "windows-gcc-x86",
+      "compilerArgs": []
+    }
+  ],
+  "version": 4
+}
