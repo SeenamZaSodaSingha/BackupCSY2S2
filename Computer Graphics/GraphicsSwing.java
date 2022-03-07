@@ -24,7 +24,7 @@ class GraphicsSwing extends JPanel implements Runnable {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-        (new Thread(m)).start();
+        // (new Thread(m)).start();
     }
 
     //<<------------------------------------------ T H R E D S ------------------------------------------------>>
@@ -87,6 +87,7 @@ class GraphicsSwing extends JPanel implements Runnable {
         g2.setColor(Color.white);
         g2.fillRect(0, 0, 600, 600);
         g2.setColor(Color.black);
+        g2.drawArc(300, 300, 100, 100, 0, 90);
         
         g2.setTransform(new AffineTransform(1, 0, 0, 1, -200, -200));
         g2.setTransform(new AffineTransform(2, 0, 0, 2, -50, 50));
