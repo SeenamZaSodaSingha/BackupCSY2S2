@@ -1,4 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"d:/Code/Y2S2/Comgame/Checker/Checker/Content/Chip.png","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/Chip.xnb","TextureProcessor","Texture2DContent",1594,22585,0.1558813
-"d:/Code/Y2S2/Comgame/Checker/Checker/Content/GameText.spritefont","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/GameText.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.0898962
-"d:/Code/Y2S2/Comgame/Checker/Checker/Content/Horse.png","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/Horse.xnb","TextureProcessor","Texture2DContent",2376,22585,0.0018264
+"d:/Code/Y2S2/Comgame/Checker/Checker/Content/Chip.png","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/Chip.xnb","TextureProcessor","Texture2DContent",1594,22585,0.1544883
+"d:/Code/Y2S2/Comgame/Checker/Checker/Content/GameText.spritefont","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/GameText.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.1595736
+"d:/Code/Y2S2/Comgame/Checker/Checker/Content/Horse.png","d:/Code/Y2S2/Comgame/Checker/Checker/Content/bin/DesktopGL/Content/Horse.xnb","TextureProcessor","Texture2DContent",2376,22585,0.0110845
