@@ -18,7 +18,6 @@
 #include "glm/gtc/matrix_transform.hpp"
 #include "glm/gtc/type_ptr.hpp"
 
-
 const GLint WIDTH = 800, HEIGHT = 600;
 
 Window mainWindow;
@@ -52,23 +51,9 @@ void CreateTriangle()
     Mesh *obj1 = new Mesh();
     obj1->CreateMesh(vertices, indices, 12, 12);
     meshList.push_back(obj1);
-
-    // obj2 asm
-    GLfloat vertices2[] =
-    {
-    -1.0f, -1.0f, 0.0f, //0
-    1.0f, -1.0f, 0.0f, //1
-    0.0f, 1.0f, 0.0f //2
-    };
-
-    unsigned int indices2[] = 
-    {
-        0, 1, 2
-    };
-
-    Mesh *obj2 = new Mesh();
-    obj2->CreateMesh(vertices2, indices2, 9, 3);
-    meshList.push_back(obj2);
+    // for(int i = 0; i < 10; i++){
+    //     meshList.push_back(obj1);
+    // }    
 }
 
 void CreateShaders()
@@ -107,30 +92,20 @@ int main()
         uniformModel = shaderList[0].GetModelLocation();
         uniformProjection = shaderList[0].GetProjectionLocation();
 
-        //obj 2
-        shaderList[1].UseShader();
-        uniformModel2 = shaderList[1].GetModelLocation();
-        uniformProjection2 = shaderList[1].GetProjectionLocation();
-
-
         //Object
         // obj 1
         glm::mat4 model (1.0f);
         model = glm::translate(model, glm::vec3(0.3f, 0.0f, -2.5f));
         // model = glm::rotate(model, 90.0f * 3.1416f / 180.0f, glm::vec3(0.0f, 0.0f, 1.0f));
-        model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f)); 
+        model = glm::scale(model, glm::vec3(0.4f, 0.6f, 1.0f)); 
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-        meshList[0]->RenderMesh();
 
-        //obj2
-        glm::mat4 model1 (1.0f);
-        model1 = glm::translate(model1, glm::vec3(1.5f, 0.7f, -2.5f));
-        // model = glm::rotate(model, 90.0f * 3.1416f / 180.0f, glm::vec3(0.0f, 0.0f, 1.0f));
-        model1 = glm::scale(model1, glm::vec3(1.5f, 2.0f, 1.0f)); 
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model1));
-        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-        meshList[1]->RenderMesh();
+
+        meshList[0]->RenderMesh(); 
+        // for(int i = 0; i < 10; i++){
+        //     meshList[i]->RenderMesh();  
+        // }
         
 
         glUseProgram(0);
