@@ -24,6 +24,7 @@ class Shader
 
         GLuint GetProjectionLocation() {return uniformProjection;}
         GLuint GetModelLocation() {return uniformModel;}
+        GLuint GetUniformLocation(const char* uniformName) {return glGetUniformLocation(shader, uniformName);}
 
     private:
         GLuint shader, uniformModel, uniformProjection;

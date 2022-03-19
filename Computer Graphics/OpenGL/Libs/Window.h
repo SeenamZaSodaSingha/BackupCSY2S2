@@ -13,7 +13,7 @@ class Window
         ~Window();
 
         int initialise();
-
+        GLFWwindow* getWindow() { return mainWindow; }
         GLint getBufferWidth() {return bufferWidth;}
         GLint getBufferHeight() {return bufferHeight;}
 
