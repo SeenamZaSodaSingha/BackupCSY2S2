@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
       {
+        "type": "java",
+        "name": "Launch R2Q1",
+        "request": "launch",
+        "mainClass": "R2Q1",
+        "projectName": "Y2S2_d20fdb61"
+      },
+      {
         "name": "GDB Launch",
         "type": "cppdbg",
         "request": "launch",
