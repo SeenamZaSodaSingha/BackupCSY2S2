@@ -12,7 +12,7 @@
         "projectName": "Y2S2_d20fdb61"
       },
       {
-        "name": "GDB Launch",
+        "name": "GDB Launch openGL",
         "type": "cppdbg",
         "request": "launch",
         "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",

@@ -1,6 +1,6 @@
 // Lab8c_shm3Clnt.c
-//pg3
-//also pg4
+// pg3
+// also pg4
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
@@ -13,10 +13,9 @@ void SIGHandler1(int sig)
 {
     signal(sig, SIG_IGN);
     // printf("from handler ");
-printf("ppid = %s,
-Btw SIGUSR1 = %d\n",str,sig);
-isLoop1 = 0;
-signal(sig,SIGHandler1);
+    printf("ppid = %s, Btw SIGUSR1 = %d\n", str, sig);
+    isLoop1 = 0;
+    signal(sig, SIGHandler1);
 }
 int main()
 {
@@ -36,14 +35,13 @@ int main()
     // raise(SIGUSR1);
     while (isLoop1)
         ; // waiting for signal
-printf("waiting for SIG before
-writing to server\n");
-sprintf(str,"%s","os kmitl\n");
-printf("Clnt write to mem & notify: %s\n",str);
-kill(ppid,SIGUSR1); //to server
-//detach from shared memory
-shmdt(str);
-// destroy the shared memory
-//shmctl(shmid,IPC_RMID,NULL);
-return 0;
+    printf("waiting for SIG before writing to server\n");
+    sprintf(str,"%s","os kmitl\n");
+    printf("Clnt write to mem & notify: %s\n",str);
+    kill(ppid,SIGUSR1); //to server
+    //detach from shared memory
+    shmdt(str);
+    // destroy the shared memory
+    //shmctl(shmid,IPC_RMID,NULL);
+    return 0;
 } // main

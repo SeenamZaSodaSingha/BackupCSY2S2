@@ -1,5 +1,5 @@
 // Lab8c_shmb4Serv.c
-//pg 4
+// pg 4
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>

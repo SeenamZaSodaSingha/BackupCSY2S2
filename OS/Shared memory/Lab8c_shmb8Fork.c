@@ -11,10 +11,10 @@ int main()
 
     int shmid;
     /* Q5.1 a or b? write the whole statement */
-    /*a*/ shmid = shmget(key, sizeof(int), 0666 | IPC_CREAT);
+    // /*a*/ shmid = shmget(key, sizeof(int), 0666 | IPC_CREAT);
     /*b*/ shmid = shmget(IPC_PRIVATE, sizeof(int), 0666 | IPC_CREAT);
     // shmat to attach to shared memory
-    count = /* Q5.2 */ shmat(shmid, NULL, 0);
+    count = (int*) shmat(shmid, NULL, 0);
     count[0] = 5;
     pid_t pid;
     if ((pid = fork()) == 0)
@@ -22,7 +22,7 @@ int main()
         int temp = count[0];
         sleep(1);
         temp = temp - 1;
-        /* Q5.3 */
+        count++;
         printf("child decrements value at %p\n", &count);
         exit(0);
     }

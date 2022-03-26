@@ -1,0 +1,17 @@
+Read from mem: 
+Data written to mem: os kmit
+
+q3
+[2] 22503
+successfully obtain ppid
+ppid = 22504, Btw SIGUSR1 = 10
+waiting for SIG before writing to server
+Clnt write to mem & notify: os kmitl
+
+from handler from handler From child: os kmitl
+
+5.1 b
+5.2 (int*)
+5.3 count[0] = temp;
+
+5.4 4 or 6
