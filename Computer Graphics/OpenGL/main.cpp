@@ -58,6 +58,19 @@ void CreateTriangle(){
     }
 }
 
+void CreateObj(){
+    Mesh *obj1 = new Mesh();
+    bool loaded = obj1->CreateMeshFromOBJ("Models/suzanne.obj");
+    if(loaded){
+        for(int i = 0; i < 10; i++){
+            meshList.push_back(obj1);
+        }
+    }else{
+        std::cout<<"Failed to loaded model"<<std::endl;
+    }
+    
+}
+
 void CreateShaders(){
     Shader* shader1 = new Shader();
     shader1->CreateFromFiles(vShader, fShader);
@@ -91,7 +104,8 @@ int main(){
     mainWindow = Window(WIDTH, HEIGHT, 3, 3);
     mainWindow.initialise();
 
-    CreateTriangle();
+    // CreateTriangle();
+    CreateObj();
     CreateShaders();
 
     GLuint uniformModel = 0, uniformProjection = 0, uniformView = 0;
@@ -120,10 +134,10 @@ int main(){
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     int width, height, nrChannels;
-    unsigned char *data = stbi_load("Textures/cloth.jpg", &width, &height, &nrChannels,0);
+    unsigned char *data = stbi_load("Textures/uvmap.png", &width, &height, &nrChannels,0);
     if (data){
         //bind image with texture
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE,data);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE,data);
         glGenerateMipmap(GL_TEXTURE_2D);
     }
     else{
